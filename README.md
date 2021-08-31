@@ -1,5 +1,24 @@
 # Mongo_Flask_API
 
+### Prepare Project Linux
+```bash
+mkdir ~/Mongo_Flask_API && cd ~/Mongo_Flask_API
+git clone https://github.com/sirtimrod/Mongo_Flask_API.git
+sudo mongoimport --db storage --collection shop --file shop.json
+python3 -m venv test_api
+cd test_api
+source bin/activate
+pip install -r  requirements.txt
+```
+
+### Run Project
+```bash
+cd ~/Mongo_Flask_API
+sudo mongo storage
+cd ~/test_api
+source bin/activate
+python3 run_server.py
+```
 
 ### Requests examples with curl
 ```bash
